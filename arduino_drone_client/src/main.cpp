@@ -1,5 +1,6 @@
 #include <Arduino.h>
 
+#include <string> // allow for use of string when sending info over bluetooth
 #include <Wire.h> // Libery for gyro and acelerometer
 #include <SoftwareSerial.h> // libery for Bluetooth module(HC-06)
 
@@ -10,10 +11,12 @@ SoftwareSerial BT(0, 1);
 // connect BT GND to GND
 // connect BT Vcc to 5V
 
-#define Motor1 6 // Motor 1 Digital pin 6
-#define Motor2 7 // Motor 2 Digital pin 7
-#define Motor3 8 // Motor 3 Digital pin 8
-#define Motor4 9 // Motor 4 Digital pin 9
+#define Motor1 4 // Motor 1 Digital pin 4
+#define Motor2 5 // Motor 2 Digital pin 5
+#define Motor3 6 // Motor 3 Digital pin 6
+#define Motor4 7 // Motor 4 Digital pin 7
+#define Motor5 8 // Motor 3 Digital pin 8
+#define Motor6 9 // Motor 4 Digital pin 9
 #define MotorArm 2 // Motor Arming Digital pin 2
 
 long accelX, accelY, accelZ;
@@ -30,6 +33,8 @@ void setup()
   pinMode(Motor2, OUTPUT);
   pinMode(Motor3, OUTPUT);
   pinMode(Motor4, OUTPUT);
+  pinMode(Motor5, OUTPUT);
+  pinMode(Motor6, OUTPUT);
   pinMode(MotorArm, OUTPUT);
 
   // set the data rate for the serial port/UART, for Bluetooth module.
@@ -38,13 +43,13 @@ void setup()
   // set the data rate for the serial port/UART, for accelerometer and gyro module.
   Serial.begin(9600);
   Wire.begin();
-  setupMPU();
+  setupMPU_6050();
 
   // Send test message to other device
   BT.println("Reciver: Setup done");
 }
 
-void setupMPU(){
+void setupMPU_6050(){
   Wire.beginTransmission(0b1101000); //This is the I2C address of the MPU (b1101000/b1101001 for AC0 low/high datasheet sec. 9.2)
   Wire.write(0x6B); //Accessing the register 6B - Power Management (Sec. 4.28)
   Wire.write(0b00000000); //Setting SLEEP register to 0. (Required; see Note on p. 9)
@@ -60,7 +65,7 @@ void setupMPU(){
 }
 
 
-char a; // stores incoming character from other device
+string Bluetooth_feed; // stores incoming character from other device
 
 void loop() 
 {
