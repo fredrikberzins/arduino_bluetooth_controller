@@ -1,2 +1,4 @@
 # arduino_drone
-Program to run on 2 arduinos to control and fly a drone
+Program a arduino into a Flight controller with the help of a PWM reciver binded to a transmitter.
+
+The FC is not ment for autolevel fligt.
