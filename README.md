@@ -1,6 +1,6 @@
 # Arduiono bluetooth controller
 
-A bluetooth controler made with 2 joyticks and 2 buttons. 
+A bluetooth controller made with 2 joyticks with built in buttons, it has no telemtry.
 
 ## Parts
 - HS-05(Bluetooth module)
@@ -30,3 +30,12 @@ A bluetooth controler made with 2 joyticks and 2 buttons.
 - Joystick_chanle_maping = "TAER"
 - Joystick_stick_mode = 1
 - Joystick_output_mode = "RC"
+
+## Body/Chassi to the conttroller
+The controller is made up of a few pecex ment to be put together with dubbel sided tape. It is amde up of 2 mane parts that are connected with a cable with 5 wires in.
+The controllers are mad like 2 nintendo Wii nunchuk, one side has a joystick, battery and step down buck converter. The other side has the HC-05, arduino and joystick.
+
+Link to the stl files to print the controllers: ##Thingaverse
+
+## Config for the bluetooth module
+To get the bluetooth module you will have to config it to binded to the right bluetooth module/reciver.
