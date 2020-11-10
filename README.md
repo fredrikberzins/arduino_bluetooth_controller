@@ -3,10 +3,11 @@
 A bluetooth controler made with 2 joyticks and 2 buttons. 
 
 ## Parts
-- 2x HS-05(Bluetooth module)
+- HS-05(Bluetooth module)
 - Arduino pro micro(Almost every ardouno works with 4 digitla pins and 4 analog. May need change to platformio.ini file.)
 - Power source/Battery (5V or higher)
 - Tiny Buck converter(If power source voltage is higher then 5V)
+- 2x 2 axis Joysticks with built in buttoons.
 
 ## Signal output
 - 4 letter char (depending on what joystick chanle maping)
