@@ -8,28 +8,49 @@
 #define right_switch_pin 2
 #define left_switch_pin 3
 
+#define right_x_axis analogRead(right_x_axis_pin)
+#define right_y_axis analogRead(right_y_axis_pin)
+#define left_x_axis analogRead(left_x_axis_pin)
+#define left_y_axis analogRead(left_y_axis_pin)
+
+#define right_switch digitalRead(right_switch_pin)
+#define left_switch digitalRead(left_switch_pin)
+
+//create max an min varibles
+int min_right_x_axis = 512;
+int max_right_x_axis = 512;
+
+int min_right_y_axis = 512;
+int max_right_y_axis = 512;
+
+int min_left_x_axis = 512;
+int max_left_x_axis = 512;
+
+int min_left_y_axis = 512;
+int max_left_y_axis = 512;
+
 void print_values()
 {
   //a first print to se if Serial.print works (if it all works all values will be 0).
-  Serial.println("right joystick x-axis min: ");
+  Serial.print("right joystick x-axis min: ");
   Serial.print(min_right_x_axis);
   Serial.print(" max: ");
-  Serial.print(max_right_x_axis);
+  Serial.println(max_right_x_axis);
 
-  Serial.println("right joystick y-axis min: ");
+  Serial.print("right joystick y-axis min: ");
   Serial.print(min_right_y_axis);
   Serial.print(" max: ");
-  Serial.print(max_right_y_axis);
+  Serial.println(max_right_y_axis);
 
-  Serial.println("left joystick x-axis min: ");
+  Serial.print("left joystick x-axis min: ");
   Serial.print(min_left_x_axis);
   Serial.print(" max: ");
-  Serial.print(max_left_x_axis);
+  Serial.println(max_left_x_axis);
 
-  Serial.println("left joystick y-axis min: ");
+  Serial.print("left joystick y-axis min: ");
   Serial.print(min_left_y_axis);
   Serial.print(" max: ");
-  Serial.print(max_left_y_axis);
+  Serial.println(max_left_y_axis);
 }
 
 void setup()  
@@ -44,29 +65,6 @@ void setup()
   pinMode(right_switch_pin, INPUT);
   pinMode(left_switch_pin, INPUT);
 
-  //set joysticks values as varibles.
-  int right_x_axis = analogRead(A0);
-  int right_y_axis = analogRead(A1);
-  int left_x_axis = analogRead(A2);
-  int left_y_axis = analogRead(A3);
-
-  //set button values as varibles.
-  int right_switch = digitalRead(2);
-  int left_switch = digitalRead(3);
-
-  //create max an min varibles
-  int  = 0;
-  int max_right_x_axis = 0;
-
-  int min_right_y_axis = 0;
-  int max_right_y_axis = 0;
-
-  int min_left_x_axis = 0;
-  int max_left_x_axis = 0;
-
-  int min_left_y_axis = 0;
-  int max_left_y_axis = 0;
-
   //set the data rate for the serial monitor.
   Serial.begin(9600);
 
@@ -75,48 +73,54 @@ void setup()
 }
 
 
+
 void loop() 
 {
   //right joystick x-axis
-  if (min_right_x_axis > right_x_axis) {
-    min_right_x_axis = right_x_axis
+  if (right_x_axis < min_right_x_axis)
+  {
+    min_right_x_axis = right_x_axis;
   }
   
-  if (max_right_x_axis > right_x_axis) {
-    max_right_x_axis = right_x_axis
+  if (right_x_axis > max_right_x_axis)
+  {
+    max_right_x_axis = right_x_axis;
   }
 
   //right joystick y-axis
-
-  if (min_right_y_axis > right_y_axis) {
-    min_right_y_axis = right_y_axis
+  if (right_y_axis < min_right_y_axis)
+  {
+    min_right_y_axis = right_y_axis;
   }
-  
-  if (max_right_y_axis > right_y_axis) {
-    max_right_y_axis = right_y_axis
+
+  if (right_y_axis > max_right_y_axis)
+  {
+    max_right_y_axis = right_y_axis;
   }
 
   //left joystick x-axis
-
-    if (min_left_x_axis > left_x_axis) {
-    min_left_x_axis = left_x_axis
+  if (left_x_axis < min_left_x_axis)
+  {
+    min_left_x_axis = left_x_axis;
   }
   
-  if (max_left_x_axis > left_x_axis) {
-    max_left_x_axis = left_x_axis
+  if (left_x_axis > max_left_x_axis)
+  {
+    max_left_x_axis = left_x_axis;
   }
 
   //left joystick y-axis
-
-  if (min_left_y_axis > left_y_axis) {
-    min_left_y_axis = left_y_axis
+  if (left_y_axis < min_left_y_axis)
+  {
+    min_left_y_axis = left_y_axis;
   }
   
-  if (max_left_y_axis > left_y_axis) {
-    max_left_y_axis = left_y_axis
+  if (left_y_axis > max_left_y_axis)
+  {
+    max_left_y_axis = left_y_axis;
   }
 
   print_values();
 
-  delay(50);
+  delay(500);
 }
