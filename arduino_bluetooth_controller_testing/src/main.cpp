@@ -65,8 +65,6 @@ void setup()
   pinMode(right_switch_pin, INPUT);
   pinMode(left_switch_pin, INPUT);
 
-<<<<<<< HEAD
-=======
   //set joysticks values as varibles.
   int right_x_axis = analogRead(A0);
   int right_y_axis = analogRead(A1);
@@ -79,7 +77,6 @@ void setup()
 
 
 
->>>>>>> 793d24fbc5c21aa50c8fc8c14c53d08c2f6892fc
   //set the data rate for the serial monitor.
   Serial.begin(9600);
 
@@ -92,7 +89,6 @@ void setup()
 void loop() 
 {
   //right joystick x-axis
-<<<<<<< HEAD
   if (right_x_axis < min_right_x_axis)
   {
     min_right_x_axis = right_x_axis;
@@ -100,18 +96,10 @@ void loop()
   
   if (right_x_axis > max_right_x_axis)
   {
-=======
-  if (min_right_x_axis > right_x_axis) {
-    min_right_x_axis = right_x_axis;
-  }
-  
-  if (max_right_x_axis > right_x_axis) {
->>>>>>> 793d24fbc5c21aa50c8fc8c14c53d08c2f6892fc
     max_right_x_axis = right_x_axis;
   }
 
   //right joystick y-axis
-<<<<<<< HEAD
   if (right_y_axis < min_right_y_axis)
   {
     min_right_y_axis = right_y_axis;
@@ -119,19 +107,10 @@ void loop()
 
   if (right_y_axis > max_right_y_axis)
   {
-=======
-
-  if (min_right_y_axis > right_y_axis) {
-    min_right_y_axis = right_y_axis;
-  }
-  
-  if (max_right_y_axis > right_y_axis) {
->>>>>>> 793d24fbc5c21aa50c8fc8c14c53d08c2f6892fc
     max_right_y_axis = right_y_axis;
   }
 
   //left joystick x-axis
-<<<<<<< HEAD
   if (left_x_axis < min_left_x_axis)
   {
     min_left_x_axis = left_x_axis;
@@ -139,19 +118,10 @@ void loop()
   
   if (left_x_axis > max_left_x_axis)
   {
-=======
-
-    if (min_left_x_axis > left_x_axis) {
-    min_left_x_axis = left_x_axis;
-  }
-  
-  if (max_left_x_axis > left_x_axis) {
->>>>>>> 793d24fbc5c21aa50c8fc8c14c53d08c2f6892fc
     max_left_x_axis = left_x_axis;
   }
 
   //left joystick y-axis
-<<<<<<< HEAD
   if (left_y_axis < min_left_y_axis)
   {
     min_left_y_axis = left_y_axis;
@@ -159,14 +129,6 @@ void loop()
   
   if (left_y_axis > max_left_y_axis)
   {
-=======
-
-  if (min_left_y_axis > left_y_axis) {
-    min_left_y_axis = left_y_axis;
-  }
-  
-  if (max_left_y_axis > left_y_axis) {
->>>>>>> 793d24fbc5c21aa50c8fc8c14c53d08c2f6892fc
     max_left_y_axis = left_y_axis;
   }
 
