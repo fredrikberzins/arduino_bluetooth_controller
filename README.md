@@ -16,26 +16,17 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 
 ## Settings
 ### Output signal settings
-#### Joystick chanle maping
-- joystick chanle maping changes what order the signals are sent and is whriten as a four letter code made of A, E, R and T(Aileron, Elevator, Rudder and Throttle).
-- The channle maping changes the order of the chanle siganls
-#### Joystick stick mode
-- joystick stick mode changes witch joystick the trottle is on,  the output is sent as mode 1(1, throttle on right x-axis) or mode 2(2, throttle on left x-axis).
-- mode 1 has throttle on rigth x-axis, eileron on left x-axis.
-- mode 2 has throttle on left x-axis, eileron on right x-axis.
 #### Joystick output mode
 - joystick output mode changes what number is low and high, the output is sent as RC-signal(RC, 1000-2000), low_RC-signal(lowRC, 0-1000) or Procent(procent, 0 - 100). 
 
 ### Standard settings
-- Joystick_chanle_maping = "TAER"
-- Joystick_stick_mode = 1
 - Joystick_output_mode = "RC"
 
 ## Body/Chassi to the conttroller
 The controller is made up of a few pecex ment to be put together with dubbel sided tape. It is amde up of 2 mane parts that are connected with a cable with 5 wires in.
 The controllers are mad like 2 nintendo Wii nunchuk, one side has a joystick, battery and step down buck converter. The other side has the HC-05, arduino and joystick.
 
-Link to the stl files to print the controllers: ##Thingaverse
+Link to the stl and f3d files to print the controllers or customize: https://www.thingiverse.com/thing:4665958
 
 ## Config for the bluetooth module
 To get the bluetooth module you will have to config it to binded to the right bluetooth module/reciver.
