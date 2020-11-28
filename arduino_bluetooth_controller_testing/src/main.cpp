@@ -1,3 +1,8 @@
+//===================
+//  Testing Program
+//===================
+//This program is ment to output min and max values of the joystick to see that they are working corectly.
+
 #include <Arduino.h>
 
 #define right_x_axis_pin A0
@@ -65,26 +70,12 @@ void setup()
   pinMode(right_switch_pin, INPUT);
   pinMode(left_switch_pin, INPUT);
 
-  //set joysticks values as varibles.
-  int right_x_axis = analogRead(A0);
-  int right_y_axis = analogRead(A1);
-  int left_x_axis = analogRead(A2);
-  int left_y_axis = analogRead(A3);
-
-  //set button values as varibles.
-  int right_switch = digitalRead(2);
-  int left_switch = digitalRead(3);
-
-
-
   //set the data rate for the serial monitor.
   Serial.begin(9600);
 
   print_values();
   delay(1000);
 }
-
-
 
 void loop() 
 {
