@@ -17,10 +17,27 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 ## Settings
 ### Output signal settings
 #### Joystick output mode
-- joystick output mode changes what number is low and high, the output is sent as RC-signal(RC, 1000-2000), low_RC-signal(lowRC, 0-1000) or Procent(procent, 0 - 100). 
+- joystick output mode changes what number is low and high, the output is sent as RC-signal(0, 1000-2000), low_RC-signal(1, 0-1000) or Procent(2, 0 - 100).
+- (id/code setting nummber, output betwine x-y)
+
+### Button inversion
+- Inverts the normal and pressed output state of the buttons
+- Button_inversion = 0 means that buttons will regester 0 normaly and 1 when pressed
+
+### Buttons activation
+- Activating or deactivating the buttons so they don't output the button signal.
+- The right and left button can be deactivated and activated induvidualy.
+- If the buttons are not conneted they can be turned off to lower the latency of the signal.
+  
+### Settings in code
+- All settings are writhen with the id of the option.
+
 
 ### Standard settings
-- Joystick_output_mode = "RC"
+- Joystick_output_mode = 0
+- Button_inversion = 0
+- Button_active_right = 0
+- Button_active_left = 0
 
 ## Body/Chassi to the conttroller
 The controller is made up of a few pecex ment to be put together with dubbel sided tape. It is amde up of 2 mane parts that are connected with a cable with 5 wires in.
