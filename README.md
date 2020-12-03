@@ -3,11 +3,13 @@
 A bluetooth controller made with 2 joyticks with built in buttons, it has no telemtry.
 
 ## Parts
-- HS-05(Bluetooth module)
-- Arduino pro micro(Almost every ardouno works with 4 digitla pins and 4 analog. May need change to platformio.ini file.)
+- HS-05(Bluetooth module), see [Datasheet](https://www.estudioelectronica.com/wp-content/uploads/2018/09/istd016A.pdf), [manual](https://www.gme.cz/data/attachments/dsh.772-148.1.pdf)
+- Arduino pro micro, see [Pin out](https://cdn.sparkfun.com/datasheets/Dev/Arduino/Boards/ProMicro16MHzv1.pdf)
+  - Almost every ardouno works with atleast 4 digitla pins and 4 analog. May need to change board varible from micro platformio.ini file.)
 - Power source/Battery (5V or higher)
-- Tiny Buck converter(If power source voltage is higher then 5V)
-- 2x 2 axis Joysticks with built in buttoons.
+- Tiny Buck converter, see [Datasheet](docs/stepdown_buck_conveter.md)
+  - Only if the power source voltage is higher then 5V
+- 2x 2 axis Joysticks with built in buttoons, see [Manual](https://www.electrokit.com/uploads/productfile/41015/41015703_-_Analog_Joystick.pdf)
 
 ## Signal output
 - 4 letter char (depending on what joystick chanle maping)
@@ -43,7 +45,7 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 The controller is made up of a few pecex ment to be put together with dubbel sided tape. It is amde up of 2 mane parts that are connected with a cable with 5 wires in.
 The controllers are mad like 2 nintendo Wii nunchuk, one side has a joystick, battery and step down buck converter. The other side has the HC-05, arduino and joystick.
 
-Link to the stl and f3d files to print the controllers or customize: https://www.thingiverse.com/thing:4665958
+Link to the stl and f3d files to print the controllers or customize: [Thingiverse](https://www.thingiverse.com/thing:4665958)
 
 ## Config for the bluetooth module
 To get the bluetooth module you will have to config it to binded to the right bluetooth module/reciver.
