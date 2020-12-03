@@ -14,7 +14,7 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 ## Signal output
 - 4 letter char (depending on what joystick chanle maping)
 - 4 numbers betwine 0-100, 0-1000 or 1000-2000 (depending on what joystick output mode)
-- 2 numbers betwine 0-1 (depending on )
+- 2 numbers betwine 0-1
 
 ## Settings
 ### Output signal settings
@@ -42,8 +42,8 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 - Button_active_left = 0
 
 ## Body/Chassi to the conttroller
-The controller is made up of a few pecex ment to be put together with dubbel sided tape. It is amde up of 2 mane parts that are connected with a cable with 5 wires in.
-The controllers are mad like 2 nintendo Wii nunchuk, one side has a joystick, battery and step down buck converter. The other side has the HC-05, arduino and joystick.
+The controller is made up of a few parts meant to be put together with m3 bolts and thread inserts. It is amde up of 2 main parts that are connected with a cable with 5 wires in.
+The controllers wore inspierd by nintendo Wii nunchuk's. one side has a joystick, battery and step down buck converter, The other side has the HC-05, arduino and joystick.
 
 Link to the stl and f3d files to print the controllers or customize: [Thingiverse](https://www.thingiverse.com/thing:4665958)
 
