@@ -12,7 +12,7 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 ## Signal output
 - 4 letter char (depending on what joystick chanle maping)
 - 4 numbers betwine 0-100, 0-1000 or 1000-2000 (depending on what joystick output mode)
-- 2 numbers betwine 0-1 (depending on )
+- 2 numbers betwine 0-1
 
 ## Settings
 ### Output signal settings
