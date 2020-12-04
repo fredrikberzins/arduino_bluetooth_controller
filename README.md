@@ -6,7 +6,7 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 - HC-05(Bluetooth module), see [Datasheet](docs/datasheet_hc-05.pdf), [manual](docs/manual_hc-05.pdf)
 - Arduino pro micro, see [Pin out](docs/pin_out_arduino.pdf)
   - Almost every ardouno works with atleast 4 digitla pins and 4 analog. May need to change board varible from micro platformio.ini file.)
-- two 2 axis Joysticks with built in buttoons, see [Manual](docs/manual_Joystick.pdf)
+- two 2 axis Joysticks with built in buttoons, see [Manual](docs/manual_joystick.pdf)
 - Power source/Battery (5V or higher)
   - **If the power source voltage is higher then 5V.**
     - Tiny Buck converter, see [Datasheet](docs/stepdown_buck_conveter.md)
