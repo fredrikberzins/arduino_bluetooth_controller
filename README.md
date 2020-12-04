@@ -18,7 +18,7 @@ A bluetooth controller made with 2 joyticks with built in buttons, it has no tel
 #### Not nessesary
 - Button, see [technical drawing](docs/technical_drawing_button.jpg)
   - normaly closed
-- Switch, see [datasheet](dosc/datasheet_switch.pdf)
+- Switch, see [datasheet](docs/datasheet_switch.pdf)
   - two position switch
 - Diode
   - min volt: 5V
